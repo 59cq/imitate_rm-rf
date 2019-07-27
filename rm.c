@@ -27,7 +27,7 @@ void rm_rf(DIR* dp,char *path){
             strcpy(path,path_temp);
         }else{
             strcat(path,dir->d_name);
-            printf("open dp:%s\n",path);
+            //printf("open dp:%s\n",path);
             _dp = opendir(path);
             rm_rf(_dp,strcat(path,"/"));
             rmdir(path);
